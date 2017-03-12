@@ -24,4 +24,8 @@ io.on('connection',function (socket) {
         console.log(data);
         socket.emit("hellos",{data:'you r sending'});
     });
+    socket.on('send',function (data) {
+        var js=JSON.parse(data);
+        socket.emit(js.reciever,data);
+    });
 });
