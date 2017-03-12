@@ -25,6 +25,6 @@ io.on('connection',function (socket) {
         socket.emit("hellos",{data:'you r sending'});
     });
     socket.on('send',function (data) {
-        socket.emit("rec",data);
+        socket.emit("rec",{msg:data});
     });
 });
