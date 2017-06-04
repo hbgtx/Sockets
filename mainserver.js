@@ -22,9 +22,9 @@ io.on('connection',function (socket) {
     socket.emit('hello',{name:'hemant',class:'btech'});
     socket.on('reply',function (data) {
         console.log(data);
-        socket.broadcast.emit("hellos",{data:'you r sending'});
+        socket.emit("hellos",{data:'you r sending'});
     });
     socket.on('send',function (data) {
-        socket.broadcast.emit("rec",{msg:data});
+        socket.emit("rec",{msg:data});
     });
 });
