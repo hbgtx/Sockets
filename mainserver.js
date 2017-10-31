@@ -2,7 +2,7 @@
 
 var http = require('http').createServer(serverHandler);
 var io   = require('socket.io')(http);
-http.listen(process.env.PORT || 700);
+http.listen(process.env.PORT || 700);//defining port
 
 function serverHandler(req,res){
 
